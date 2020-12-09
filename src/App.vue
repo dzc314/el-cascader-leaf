@@ -1,17 +1,62 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <el-cascader-leaf :options="options" v-model="value" :props="props" @change="changeHandle"></el-cascader-leaf>
+    <el-button @click="logValue">查看</el-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ElCascaderLeaf from './components/ElCascaderLeaf.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ElCascaderLeaf,
+  },
+  data() {
+    return {
+      value: 4,
+      props: {
+        value: 'id',
+        parentKey: 'parent'
+      },
+      options: [
+        {
+          id: 1,
+          parent: null,
+          label: '一级1',
+          children: [
+            {
+              id: 2,
+              parent: 1,
+              label: '一级1.1',
+              children: [
+                {
+                  id: 3,
+                  parent: 2,
+                  label: '一级1.1.1',
+                },
+                {
+                  id: 4,
+                  parent: 2,
+                  label: '一级1.1.2',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }
+  },
+  methods: {
+    logValue() {
+      console.log(this.value);
+    },
+    changeHandle(value, selections) {
+      // value [String, Number] 选中末节点的值
+      // selections [Array] 选中节点及其所有父节点的对象级数组
+      console.log(selections);
+    }
   }
 }
 </script>

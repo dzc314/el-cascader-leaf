@@ -1,14 +1,33 @@
 {
-  "name": "el-cascader-leaf",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@dzc314/el-cascader-leaf",
+  "version": "0.1.4",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "package": "vue-cli-service build --target lib --name el-cascader-leaf ./src/components/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dzc314/el-cascader-leaf"
+  },
+  "main": "./dist/el-cascader-leaf.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "keywords": [
+    "cascader",
+    "级联单选框",
+    "数据绑定叶子节点"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.14.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
