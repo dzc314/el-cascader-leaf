@@ -1,6 +1,6 @@
 {
   "name": "@dzc314/el-cascader-leaf",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",

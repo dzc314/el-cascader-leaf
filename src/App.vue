@@ -18,19 +18,20 @@ export default {
       value: 4,
       props: {
         value: 'id',
-        parentKey: 'parent'
+        parentKey: 'parent',
+        children: 'childrens'
       },
       options: [
         {
           id: 1,
           parent: null,
           label: '一级1',
-          children: [
+          childrens: [
             {
               id: 2,
               parent: 1,
               label: '一级1.1',
-              children: [
+              childrens: [
                 {
                   id: 3,
                   parent: 2,

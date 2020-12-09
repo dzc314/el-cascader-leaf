@@ -29,7 +29,7 @@ export default {
         label: 'label',
         value: 'value',
         parentKey: 'parentId',
-        childrenKey: 'children',
+        children: 'children',
       }),
     },
     options: {
@@ -47,7 +47,7 @@ export default {
         label: 'label',
         value: 'value',
         parentKey: 'parentId',
-        childrenKey: 'children',
+        children: 'children',
       },
       values: [],
       optionsArray: []
@@ -90,22 +90,22 @@ export default {
       if (!this.options.length) {
         return
       }
-      const { value, parentKey, childrenKey } = this.defaultProps
+      const { value, parentKey, children } = this.defaultProps
       const family = this.getFamily(
         this.options,
         parentKey,
-        childrenKey,
+        children,
         value,
         this.vModel
       )
       this.values = family.map((item) => item[value])
     },
-    getFamily(tree, parentKey, childrenKey, valueKey, nodeValue) {
+    getFamily(tree, parentKey, children, valueKey, nodeValue) {
       const family = []
       if (!tree.length) {
         return family
       }
-      const arr = treeToArray(this.options, childrenKey)
+      const arr = treeToArray(this.options, children)
       this.optionsArray = arr
       const endChild = find(arr, valueKey, nodeValue)
       if (!endChild) {

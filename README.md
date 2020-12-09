@@ -29,8 +29,10 @@ export default{
     return {
       value: 4, // 双向数据绑定的值
       props: {
-        value: 'id',  // 设置取值的key
-        parentKey: 'parent' // 设置父值key, 根据options的数据结构自行定义
+        value: 'id',  // 设置取值的key, 默认值为'value'
+        label: 'label', // 显示文本, 默认值为'lable'
+        parentKey: 'parent', // 设置父值key, 根据options的数据结构自行定义, 默认值为'parentId'
+        children: 'children', // 树结构中子集的key, 默认值为'children'
       },
       options: [
         {
