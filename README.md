@@ -1,7 +1,7 @@
 # el-cascader-leaf
 ## 说明
 el-cascader-leaf是一个级联单项选择框，依赖于element-ui的el-cascader级联组件，本组件最大亮点是对选中的叶子节点进行双向数据绑定。
-有些时候我们只需要用到叶子节点的值，而el-cascader需要传选中节点及其父节点的值才能匹配上叶子节点，el-cascader-leaf可完美解决此触点，快来试试吧。
+有些时候我们只需要用到叶子节点的值，而el-cascader需要传选中节点及其父节点的值才能匹配上叶子节点，el-cascader-leaf可完美解决此痛点，快来试试吧。
 
 ## 通过NPM安装
 ```
@@ -30,7 +30,7 @@ export default{
       value: 4, // 双向数据绑定的值
       props: {
         value: 'id',  // 设置取值的key, 默认值为'value'
-        label: 'label', // 显示文本, 默认值为'lable'
+        label: 'label', // 显示文本, 默认值为'label'
         parentKey: 'parent', // 设置父值key, 根据options的数据结构自行定义, 默认值为'parentId'
         children: 'children', // 树结构中子集的key, 默认值为'children'
       },

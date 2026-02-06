@@ -2,10 +2,18 @@
   <div id="app">
     <el-cascader-leaf :options="options" v-model="value" :props="props" @change="changeHandle"></el-cascader-leaf>
     <el-button @click="logValue">查看</el-button>
+    <div style="width: 100px;">
+      <TextTooltip
+        content="Welcome to Your Vue.js + TypeScript App"
+        placement="bottom"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import 'text-tooltip'
+import 'text-tooltip/dist/text-tooltip.css'
 import ElCascaderLeaf from './components/ElCascaderLeaf.vue'
 
 export default {
